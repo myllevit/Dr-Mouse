@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    color: #f1f1f1;
+}
+
+@keyframes animarBorderRadius {
+    0% {
+        border-radius: 40% 0 40% 0; /* Início com bordas arredondadas */
+    }
+    25% {
+        border-radius: 0%; /* Meio da animação, bordas quadradas */
+    }
+    50% {
+        border-radius: 0 40% 0 40%; /* Volta ao início */
+    }
+    100% {
+        border-radius: 40% 0 40%;
+    }
+}
+
+@keyframes animacaoClique {
+    0% {
+        transform: scale(1);  /* Começa no tamanho original */
+    }
+    50% {
+        transform: scale(1.02);  /* Aumenta o tamanho em 20% */
+    }
+    100% {
+        transform: scale(1);  /* Volta ao tamanho original */
+    }
+} 
+
+div > img {
+    animation: animarBorderRadius 3s infinite ease-in-out; /* Animação contínua */
+    transition: transform 1s ease-in-out; /* Transição para o efeito de zoom */
+    border-radius: 40% 0 40% 0;
+    transition: 1s ease-in-out;
+    height: auto;
+    width: auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.animacao-click {
+    animation: animacaoClique 0.5s ease-in-out;
+}
+
+div > img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+
+
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 3%;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
